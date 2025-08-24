@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4e5qp8d4y804"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5rnhg"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vd8un"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rewj6"]
+size = Vector3(1.90045, 0.109497, 2.01233)
+
+[node name="TestLevel" type="StaticBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_5rnhg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+mesh = SubResource("PlaneMesh_vd8un")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0.0635681, -0.0162964, 0.0281372)
+shape = SubResource("BoxShape3D_rewj6")
+metadata/_edit_lock_ = true

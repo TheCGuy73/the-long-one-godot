@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck5j0ubg7etim"]
+
+[ext_resource type="Script" uid="uid://bpx482vc77qib" path="res://Scripts/game_container.gd" id="1_px813"]
+[ext_resource type="PackedScene" uid="uid://c4e5qp8d4y804" path="res://CharactersScene/test_level.tscn" id="2_dygpy"]
+[ext_resource type="PackedScene" uid="uid://bfx8v0xuruvwr" path="res://CharactersScene/maya_body.tscn" id="3_36dh3"]
+
+[node name="GameContainer" type="Node3D"]
+script = ExtResource("1_px813")
+
+[node name="FPSContainer" type="Node" parent="."]
+
+[node name="FPSDebug" type="Label" parent="FPSContainer"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="MayaBody" parent="." instance=ExtResource("3_36dh3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.3702, 0)
+
+[node name="TestLevel" parent="." instance=ExtResource("2_dygpy")]
